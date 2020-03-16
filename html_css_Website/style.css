@@ -1,0 +1,191 @@
+*,
+*::after
+,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    height: 6vh;
+}
+nav {
+    position: fixed;
+    display: flex;
+    height: 6vh;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 20px 0px;
+   font-family: 'Montserrat';
+   z-index: 1;
+   background-color: black;
+   opacity: 0.8;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(184, 184, 184);
+    font-size: 14px;
+    transition: color 0.3s ease-in;
+}
+.nav-links a:hover {
+   color: white; 
+}
+ .nav-links li {
+     list-style: none;
+     /* opacity: 0; */
+}
+.nav-links {
+   display: flex;
+   justify-content: space-around;
+   width: 50%;
+}
+.logo {
+   font-size: 19px;
+  color: rgb(184, 184, 184)   ;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: color 0.5s ease-in;
+
+}
+.logo:hover {
+    color: white;
+}
+.toggle .line1 {
+    transform: rotate(-50deg)
+}
+.toggle .line2 {
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+.burger {
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+.line1 {
+  border: solid 0.5px rgb(184, 184, 184);
+  width: 20px;
+  margin-bottom: 4px;
+  transition: all 0.2s;
+
+}
+.line2{
+    border: solid 0.5px rgb(184, 184, 184);
+    width: 20px;
+    transition: all 0.5s ease;
+}
+@media screen and (max-width: 768px){
+    .nav-links {
+      position: absolute;
+      top: 6vh;
+      display: flex;
+      flex-direction: column ;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+      transform: translateY(-100%);
+      z-index: -1;
+
+    }
+    .nav-links a {
+        color: rgb(184, 184, 184);
+        padding: 1.5px 0px;
+    }
+    .burger {
+        display: block;
+    }
+    nav {
+         justify-content: space-around;
+    }
+    .nav-links li {
+        padding-bottom: 50px;
+        opacity: 0;
+    }
+
+}
+.nav-active{
+    transform: translateY(0%);
+    transition: transform 0.8s ease-in-out
+}
+@keyframes navLinkFade {
+ from {
+     opacity: 0;
+     transform: translateY(-50px);
+ }
+ to {
+  opacity: 1;
+  transform: translateY(0px);
+ }
+}
+.page {
+    height: 94vh;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 25% 50% 25%;
+
+}
+.discription h2{
+    font-size: 30px;
+}
+.discription  p{
+    font-size: 4rem;
+    padding: 10px 0px;
+
+}
+.discription,.phone,.laptop,.watch {
+    font-family: 'Open Sans', sans-serif;
+    grid-row:3/4;
+    grid-column:2/3;
+    align-self: start;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+}
+.discription a {
+    text-decoration:  none;
+    color: rgb(6, 6, 199);
+    display: inline-block;
+    font-size: 2.5rem;
+}
+.discription a:hover {
+   border-bottom: rgb(6, 6, 199) 2px solid;   
+}
+
+.hero img{
+   height: 55rem;
+}
+@media screen and (max-width: 450px){
+    .hero img {
+        height: 40rem;
+    }
+    .discription p {
+        font-size: 2.5rem;
+    }
+    }
+.hero {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: start;
+}
+.membership {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 10% 1fr 10%;
+
+}
+
+
+
+
+
+
+
+
